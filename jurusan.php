@@ -18,6 +18,9 @@
 
 						<div class="thumbnail-text">
 							<?= $j['nama'] ?>
+							<div class='price-tag'>
+							<p class='price'>Rp.<?= $j['price'] ?></p>
+						</div>
 						</div>
 
 					</div>
