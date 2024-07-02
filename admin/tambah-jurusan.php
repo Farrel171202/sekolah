@@ -71,7 +71,7 @@
 											'".$ket."',
 											'".$rename."',
 											null,
-											null
+											null,
 									)");
 
 									if($simpan){

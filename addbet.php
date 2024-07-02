@@ -14,16 +14,20 @@
           <h4>Masukan Data Bet</h4>
           <form method="post">
             <div class="modal-body">
-              <label> masukan gambar</label>
-              <input type="text" name="masukan_gambar"class="form-control" required><br>
-              <label> ukuran</label></select><br>
+              <label>Nama</label>
+              <input type="text" name="nama" class="form-control" required>
+              <label>Nomor Handphone</label>
+              <input type="text" name="handphone" class="form-control" required>
+              <label>Masukan Gambar</label>
+              <input type="text" name="gambar"class="form-control" required><br>
+              <label>Ukuran</label></select><br>
               <select class="form-control" name="ukuran">
                 <option selected disabled>default</option>
-                <option value="3_x_4">3 x 4</option>
-                <option value="3_x_4">3 x 4</option>
-                <option value="3_x_4">3 x 4</option>
+                <option value="3x4">3 x 4</option>
+                <option value="3x4">3 x 4</option>
+                <option value="3x4">3 x 4</option>
               </select><br>
-              <label> jumlah</label>
+              <label>Jumlah</label>
               <input type="text" name="jumlah"class="form-control" required></select><br>
             <input type="hidden" name="bookisbn" >
             <input type="submit" name="addlogo" class="btn btn-primary">
