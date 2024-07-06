@@ -29,7 +29,6 @@
               </select><br>
               <label>Jumlah</label>
               <input type="text" name="jumlah"class="form-control" required></select><br>
-            <input type="hidden" name="bookisbn" >
             <input type="submit" name="addlogo" class="btn btn-primary">
           </form>
        	</div>
