@@ -11,16 +11,14 @@
 			?>
 
 				<div class="col-4">
-					<a href="<?= $j['page'] ?>" class="thumbnail-link">
+					<a href="catalog.php?page=<?= $j['page'] ?>" class="thumbnail-link">
 					<div class="thumbnail-box">
 						<div class="thumbail-img" style="background-image: url('uploads/jurusan/<?= $j['gambar'] ?>');">
 						</div>
 
 						<div class="thumbnail-text">
-							<?= $j['nama'] ?>
-							<div class='price-tag'>
-							<p class='price'>Rp.<?= $j['price'] ?></p>
-						</div>
+							<?= $j['nama'] ?><br>
+							Rp.<?= $j['price']?>
 						</div>
 
 					</div>

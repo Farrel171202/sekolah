@@ -11,6 +11,12 @@ a {
 	text-decoration: none;
 }
 
+.badge-confirm{
+	background-color: rgb(237, 180, 37);
+	color: white;
+	border:#000 solid;
+}
+
 .float-left {
 	float:left;
 }
@@ -421,6 +427,27 @@ footer {
 	color: #fff;
 }
 
+.price-tag {
+	border: 1px solid #000;
+	padding: 20px;
+	max-width: 200px;
+	text-align: center;
+}
+.price-tag h1 {
+	font-size: 20px;
+	margin: 0;
+}
+.price-tag p {
+	font-size: 16px;
+	margin: 10px 0;
+}
+.price-tag .price {
+	font-size: 24px;
+	color: #E74C3C;
+}
+
+
+
 /*css mobile*/
 
 @media screen and (max-width: 768px){
@@ -464,21 +491,3 @@ footer {
 
 }
 
-.price-tag {
-	border: 1px solid #000;
-	padding: 20px;
-	max-width: 200px;
-	text-align: center;
-}
-.price-tag h1 {
-	font-size: 20px;
-	margin: 0;
-}
-.price-tag p {
-	font-size: 16px;
-	margin: 10px 0;
-}
-.price-tag .price {
-	font-size: 24px;
-	color: #E74C3C;
-}

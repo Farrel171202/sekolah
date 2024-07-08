@@ -33,8 +33,8 @@
 							<thead>
 								<tr>
 									<th>No</th>
-									<th>Judul</th>
-									<th>Keterangan</th>
+									<th>Nama</th>
+									<th>Handphone</th>
 									<th>Gambar</th>
 									<th>Aksi</th>
 								</tr>
@@ -49,19 +49,21 @@
 										$where .= " AND judul LIKE '%".addslashes($_GET['key'])."%' ";
 									}
 
-									$informasi = mysqli_query($conn, "SELECT * FROM informasi $where ORDER BY id DESC");
+									$informasi = mysqli_query($conn, "SELECT * FROM pesanan $where ORDER BY id DESC");
 									if(mysqli_num_rows($informasi) > 0){
+										$total = 0;
 										while($p = mysqli_fetch_array($informasi)){
 								?>
 
 								<tr>
 									<td><?= $no++ ?></td>
-									<td><?= $p['judul'] ?></td>
-									<td><?= substr($p['keterangan'], 0, 100) ?></td>
-									<td><img src="../uploads/informasi/<?= $p['gambar'] ?>" width="100px"></td>
+									<td><?= $p['nama'] ?></td>
+									<td><?=  $p['handphone']?></td>
+									<td><img src="../uploads/jurusan/<?= $p['gambar'] ?>" width="100px"></td>
 									<td>
 										<a href="edit-informasi.php?id=<?= $p['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a> 
 										<a href="hapus.php?idinformasi=<?= $p['id'] ?>" onclick="return confirm('Yakin ingin hapus ?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>
+										<a href="#" class="badge-confirm" onclick="return confirm('Konfirmasi pesanan anda? ?')">Konfirmasi</a>
 									</td>
 								</tr>
 

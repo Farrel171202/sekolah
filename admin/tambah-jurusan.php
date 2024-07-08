@@ -26,6 +26,11 @@
 							</div>
 
 							<div class="form-group">
+								<label>Harga</label>
+								<input type="text" name="price" class="input-control" required>
+							</div>
+
+							<div class="form-group">
 								<label>Gambar</label>
 								<input type="file" name="gambar" class="input-control" required>
 							</div>
@@ -43,6 +48,7 @@
 
 								$nama 	= addslashes(ucwords($_POST['nama']));
 								$ket 	= addslashes($_POST['keterangan']);
+								$price 	= addslashes($_POST['price']);
 
 								$filename 	= $_FILES['gambar']['name'];
 								$tmpname 	= $_FILES['gambar']['tmp_name'];
@@ -50,7 +56,7 @@
 
 								$formatfile = pathinfo($filename, PATHINFO_EXTENSION);
 								$rename 	= 'jurusan'.time().'.'.$formatfile;
-
+								$locate     = 'jurusan'.$formatfile;
 								$allowedtype = array('png', 'jpg', 'jpeg', 'gif');
 
 								if(!in_array($formatfile, $allowedtype)){
@@ -65,13 +71,15 @@
 
 									move_uploaded_file($tmpname, "../uploads/jurusan/".$rename);
 
-									$simpan = mysqli_query($conn, "INSERT INTO jurusan VALUES (
+									$simpan = mysqli_query($conn, "INSERT INTO jurusan() VALUES (
 											null,
 											'".$nama."',
 											'".$ket."',
 											'".$rename."',
 											null,
 											null,
+											'".$locate."',
+											'".$price."'
 									)");
 
 									if($simpan){
