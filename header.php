@@ -8,10 +8,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="uploads/identitas/<?= $d->logo ?>">
-	<title>Website <?= $d->nama ?></title>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="icon" href="../uploads/identitas/<?= $d->favicon ?>">
+		<title>Website - <?= $d->nama ?></title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+		<script>
+	      tinymce.init({
+	        selector: '#keterangan'
+	      });
+	    </script>
 </head>
 <body>
 
@@ -45,6 +51,7 @@
 				<li><a href="jurusan.php">Catalog</a></li>
 				<!-- <li><a href="galeri.php">Galeri</a></li> -->
 				<!-- <li><a href="informasi.php">Location</a></li> -->
+				<li><a href="keranjang.php">Keranjang</a></li>
 				<li><a href="kontak.php">About Us</a></li>
 				<li><a href="Login.php">Login</a></li>
 			</ul>

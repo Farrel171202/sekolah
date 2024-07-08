@@ -23,7 +23,7 @@
                 <input type="text" name="hp" class="form-control"required>
                 </div>
                 
-                <input type="text" name="jenis" value="logo" class="form-control"hidden required>
+                <input type="text" name="jenis" value="logo" class="form-control"hidden>
                 <label>Masukkan warna</label>
                 <input type="text" name="warna" class="form-control"required><br>
                 <label>Masukan gambar</label>
@@ -52,25 +52,23 @@
                 $filename 	= $_FILES['gambar']['name'];
                 $tmpname 	= $_FILES['gambar']['tmp_name'];
                 $filesize 	= $_FILES['gambar']['size'];
-            
+
                 $formatfile = pathinfo($filename, PATHINFO_EXTENSION);
-                $rename 	= 'pesanan'.time().'.'.$formatfile;
-            
+                $rename 	= 'jurusan'.time().'.'.$formatfile;
+                $locate     = 'jurusan'.$formatfile;
                 $allowedtype = array('png', 'jpg', 'jpeg', 'gif');
             
                 if(!in_array($formatfile, $allowedtype)){
+
                     echo '<div class="alert alert-error">Format file tidak diizinkan.</div>';
-                } elseif($filesize > 1000000){
+
+                }elseif($filesize > 1000000){
+
                     echo '<div class="alert alert-error">Ukuran file tidak boleh lebih dari 1 MB.</div>';
-                } else {
-                    // Check if the directory exists and create if it doesn't
-                    if (!file_exists('../uploads/jurusan/')) {
-                        if (!mkdir('../uploads/jurusan/', 0777, true)) {
-                            die('<div class="alert alert-error">Gagal membuat direktori: ../uploads/jurusan/</div>');
-                        }
-                    }
-                    move_uploaded_file($tmpname, "../uploads/jurusan/".$rename)
-                    if (move_uploaded_file($tmpname, "../uploads/jurusan/".$rename)) {
+
+                }else{
+
+                    move_uploaded_file($tmpname, "../uploads/jurusan/".$rename);
                         $simpan = mysqli_query($conn, "INSERT INTO pesanan VALUES (
                             null,
                             '".$nama."',
@@ -86,13 +84,10 @@
                             echo '<div class="alert alert-success">Simpan Berhasil</div>';
                         } else {
                             echo 'gagal simpan '.mysqli_error($conn);
-                        }
-                    } else {
-                        echo '<div class="alert alert-error">Gagal memindahkan file yang diunggah.</div>';
-                    }
+                    
                 }
             }
-            
+        }
 
     ?>
 

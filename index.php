@@ -4,8 +4,7 @@
 		<div class="banner-text">
 			<div class="container">
 				<h3>Selamat Datang di <?= $d->nama ?></h3>
-				<p>bordir komputer sedia jasa
-          bordir baju, logo, bet, dll.</p>
+				<p>bordir komputer sedia jasa bordir baju, logo, bet, dll.</p>
 			</div>
 		</div>
 	</div>
@@ -35,7 +34,7 @@
 			?>
 
 				<div class="col-4">
-					<a href="<?= $j['page'] ?>" class="thumbnail-link">
+					<a href="catalog.php?page=<?= $j['page'] ?>" class="thumbnail-link">
 					<div class="thumbnail-box">
 						<div class="thumbail-img" style="background-image: url('uploads/jurusan/<?= $j['gambar'] ?>');">
 						</div>
