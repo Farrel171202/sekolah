@@ -60,8 +60,7 @@
 									<td><?= $p['keterangan'] ?></td>
 									<td><img src="../uploads/jurusan/<?= $p['gambar'] ?>" width="100px"></td>
 									<td>
-										<a href="edit-jurusan.php?id=<?= $p['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a> 
-										<a href="hapus.php?idjurusan=<?= $p['id'] ?>" onclick="return confirm('Yakin ingin hapus ?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>
+										<a href="edit-jurusan.php?id=<?= $p['id'] ?>"></a>
 									</td>
 								</tr>
 
