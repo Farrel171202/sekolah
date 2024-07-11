@@ -269,7 +269,7 @@
                                 <label>Jumlah</label>
                                 <input type="text" name="jumlah"class="input-control" required></select>
                             <div>
-                            <input type="text" name="jenis" value="custome" class="form-control"hidden>
+                            <input type="text" name="jenis" value="Custome Baju" class="form-control"hidden>
                             <input type="submit" name="submit" class="btn btn-primary">
                         </form>
                         <?php

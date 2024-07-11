@@ -49,7 +49,7 @@
 
                             $where = " WHERE 1=1 ";
                             
-                            $informasi = mysqli_query($conn, "SELECT p.id, p.nama, p.handphone, p.gambar, p.jumlah, p.status, j.price FROM pesanan p inner join jurusan j on p.jenis = j.jenis $where ORDER BY p.id DESC");
+                            $informasi = mysqli_query($conn, "SELECT p.id, p.nama, p.handphone, p.gambar, p.jumlah, p.status, j.price FROM pesanan p left join jurusan j on p.jenis = j.jenis $where ORDER BY p.id DESC");
                             if(mysqli_num_rows($informasi) > 0){
                                 $total = 0;
                                 while($p = mysqli_fetch_array($informasi)){
